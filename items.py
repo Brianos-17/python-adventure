@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 class Item():
   """Base class of off which all items are built"""
 
