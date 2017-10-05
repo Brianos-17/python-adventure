@@ -19,3 +19,15 @@ class Spider(Enemy):
 class Parasite(Enemy):
   def __init__(self):
     super().__init__(name="Parasite", hp=10, damage=6)
+
+class Goblin(Enemy):
+  def __init__(self):
+    super().__init__(name="Goblin", hp=17, damage=8)
+
+class Ogre(Enemy):
+  def __init__(self):
+    super().__init__(name="Ogre", hp=35, damage=14)
+
+class RedOgre(Enemy):
+  def __init__(self):
+    super().__init__(name="Red Ogre", hp=60, damage=20)

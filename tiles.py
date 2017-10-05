@@ -53,11 +53,88 @@ class EnemyRoom(MapTile):
       print("{} hit you for {} damage. You have {} HP left.".format(self.enemy.name,
         self.enemy.damage, the_player.hp))
 
+#Generates enemy rooms for each type of enemy
+
+class SlugRoom(EnemyRoom):
+  def __init__()self, x, y):
+    super().__init__(x, y, enemies.Slug())
+
+  def intro_text(self):
+    if self.enemy.is_alive():
+      return """A small slimy slug moves slowly towards you."""
+    else:
+      return """You see the slug you squished earlier on the ground."""
+
+class SpiderRoom(EnemyRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, enemies.Spider())
+
+  def intro_text(self):
+    if self.enemy.is_alive():
+      return """A giant spider web blocks your path.
+         Suddenly the spider jumps at you from above!"""
+      else:
+        return """The spiders lifeless body lies on the ground."""
+
+class ParasiteRoom(EnemyRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, enemies.Parasite())
+
+  def intro_text(self):
+    if self.enemy.is_alive():
+      return """A gint blood sucking parasite detaches itself from a nearby carcus.
+         \n It latches onto your leg."""
+    else:
+      return """The shrivelled up blood sucker is lying right where you left it."""
+
+class GoblinRoom(EnemyRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, enemies.Goblin())
+
+  def intro_text(self):
+    if self.enemy.is_alive():
+      return """You hear a shriek of anger just before a Goblin jumps on your back!"""
+    else:
+      return """The dead Goblin is starting to smell..."""
+
+class OgreRoom(EnemyRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, enemies.Ogre())
+
+  def intro_text(self):
+    if self.enemy.is_alive():
+      return """Before you stands a giant ugle Ogre, and he looks mad!"""
+    else:
+      return """The body of the Ogre is blocking your path.
+        \nIt's too heavy to move. You have to climb over it."""
+
+class RedOgreRoom(enemyRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, enemies.RedOgre())
+
+  def intro_text(self):
+    if self.enemy.is_alive():
+      return """You're so close! You can see the exit!
+        \nBut standing in your way is the biggest Ogre you've ever seen.
+        \nHe's gone red with rage... Good luck!"""
+    else:
+      return """That's it, you won, why are you going backwards?!"""
+
 #Generates empty rooms for the player to walk through
 
 class EmptyRoom(MapTile):
   def intro_text(self):
     return """This part of the cave is empty. Keep looking for the way out"""
+
+  def modify_player(self, player):
+    #Room has no effect on player
+    pass
+
+#Gives player a hint that they are going in the right direction
+
+class HintRoom(MapTile):
+  def intro_text(self):
+    return """You feel a slight breeze. You must be going in the right direction"""
 
   def modify_player(self, player):
     #Room has no effect on player
@@ -70,7 +147,17 @@ class 5GoldRoom(LootRoom):
     super().__init__(x, y, items.Gold(5))
 
   def intro_text(self):
-    return """There's somethinf sparkly on the floor. It's Gold!!"""
+    return """There's something sparkly on the floor. It's 5 Gold!!"""
 
   def modifly_player(self, player):
     the_player.gold += 5
+
+class 10GoldRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items.Gold(10))
+
+  def intro_text(self):
+    return """There's something sparkly on the floor. It's 10 Gold!!"""
+
+  def modify_player(self, player):
+    the_player.gold += 10
