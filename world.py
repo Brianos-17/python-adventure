@@ -22,3 +22,6 @@ def load_tiles():
 # if the co-ordinate pair is blank no data is stored, otherwise the code
 # looks into the tiles.py file and gets the tile whole name matches and
 # passes the x and y co-ordinates to that tiles constructor
+
+def tile_exists(x, y):
+  return world.get((x, y))
