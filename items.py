@@ -37,8 +37,20 @@ class Stick(Weapon):
     super().__init__(name="Stick", description="A small but firm branch, good for whacking", 
       value=0, damage=2)
 
-class Rock(Weapon)
+class Rock(Weapon):
   def __init__(self):
-    super.__init__(name="Rock", 
+    super().__init__(name="Rock", 
       decription="A small fist sized rock. You could hurt someone with that!",
       value=0, damage=5)
+
+class RustyDagger(Weapon):
+  def __init__(self):
+    super().__init__(name="Rusty Dagger",
+      description="An old rusted dagger, I hope you've had your tetanus shot!",
+      value=2, damage=10)
+
+class Dagger(Weapon):
+  def __init__(self):
+    super().__init__(name="Dagger",
+      description="A small, yet effective, weapon. Way better than that stupid old Rusty Dagger",
+      value=5, damage=15)
