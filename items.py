@@ -15,8 +15,30 @@ class Item():
 
 # Gold item which acts as a subclass of the Item super class
 
-class Gold(item):
+class Gold(Item):
   def __init__(self, amt):
     self.amt = amt
     super().__init__(name="Gold", description="Shiny round coin. Worth {}".format(str(self.amt)),
       value=self.amt)
+
+# Weapon class which acts as a subclass of Item, but also extends its own subclasses
+
+class Weapon(Item):
+  def __init__(self, name, description, value, damage):
+    self.damage = damage
+    super().__init__(name, description, value)
+
+  def __str__(self):
+    return "{}\n=====\n{}\nValue: {}\nDamage: {}".format(self.name, self.description, self.value,
+      self.dagame)
+
+class Stick(Weapon):
+  def __init__(self):
+    super().__init__(name="Stick", description="A small but firm branch, good for whacking", 
+      value=0, damage=2)
+
+class Rock(Weapon)
+  def __init__(self):
+    super.__init__(name="Rock", 
+      decription="A small fist sized rock. You could hurt someone with that!",
+      value=0, damage=5)
