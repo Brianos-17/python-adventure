@@ -23,6 +23,13 @@ class Gold(Item):
     super().__init__(name="Gold", description="Shiny round coin. Worth {}".format(str(self.amt)),
       value=self.amt)
 
+#Potion item which restores players health
+
+class Potion(Item):
+  def __init__(self):
+    super().__init__(name="Potion", description="A bottle full of strange magical liquid",
+      value=5)
+
 # Weapon class which acts as a subclass of Item, but also extends its own subclasses
 
 class Weapon(Item):
@@ -56,3 +63,8 @@ class Dagger(Weapon):
     super().__init__(name="Dagger",
       description="A small, yet effective, weapon. Way better than that stupid old Rusty Dagger",
       value=5, damage=15)
+
+class Sword(Weapon):
+  def __init__(self):
+    super().__init__(name="Sword", description="A long sword, capable of slicing through anything!",
+    value=10, damage=25)

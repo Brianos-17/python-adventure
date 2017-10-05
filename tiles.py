@@ -140,7 +140,7 @@ class HintRoom(MapTile):
     #Room has no effect on player
     pass
 
-#Subclass of LootRoom, player finds 5 gold
+#Subclasses of LootRoom, player finds gold, potions and weapons
 
 class 5GoldRoom(LootRoom):
   def __init__(self, x, y):
@@ -161,3 +161,52 @@ class 10GoldRoom(LootRoom):
 
   def modify_player(self, player):
     the_player.gold += 10
+
+class PotionRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items.Potion())
+
+  def intro_text(self):
+    return """You've found an old chest. There's some sort of bottle inside.
+      \nYou take a swig, it makes you feel better!"""
+
+  def modify_player(self, player):
+    the_player.hp += 15
+
+class StickRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items.Stick())
+
+  def intro_text(self):
+    return """You find a stick on the ground. It could come in handy"""
+
+class RockRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items,Rock())
+
+  def intro_text(self):
+    return """Theres a small rock on the ground, it might make a good weapon."""
+
+class RustyDaggerRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items.RustyDagger())
+
+  def intro_text(self):
+    return """Stuck in the ground is a small knife. Looks like its been there a while.
+      \nIt's rusted with age."""
+
+class DaggerRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items.Dagger())
+
+  def intro_text(self):
+    return """Youve stumbled across the body of another poor soul who got lost in this cave.
+      \nBut at least he has a shiny new Dagger on his belt!"""
+
+class SwordRoom(LootRoom):
+  def __init__(self, x, y):
+    super().__init__(x, y, items.Sword())
+
+  def intro_text(self):
+    return """There! In fromnt of you, stuck in a rock you can see the pommel of a might sword.
+      \nWith a mighty effort you manage to pull the sword from the stone!"""
