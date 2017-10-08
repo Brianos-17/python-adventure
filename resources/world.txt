@@ -1,0 +1,46 @@
+			StartingRoom					
+			StickRoom					
+		5GoldRoom	EmptyRoom	EmptyRoom				
+			SlugRoom					
+			SlugRoom					
+	PotionRoom		PotionRoom					
+SpiderRoom	10GoldRoom	SlugRoom	EmptyRoom	RockRoom				
+	EmptyRoom		HintRoom					
+	SlugRoom		SpiderRoom					
+		EmptyRoom	RustyDaggerRoom	SlugRoom	EmptyRoom			
+			SpiderRoom		PotionRoom	10GoldRoom		
+					ParasiteRoom	HintRoom	EmptyRoom	
+					EmptyRoom		EmptyRoom	
+							SpiderRoom	
+		DaggerRoom	ParasiteRoom	5GoldRoom	EmptyRoom	EmptyRoom	5GoldRoom	
+		PotionRoom				EmptyRoom		
+						ParasiteRoom		
+						HintRoom		
+					EmptyRoom	GoblinRoom	EmptyRoom	
+		PotionRoom	SpiderRoom	SpiderRoom	EmptyRoom		5GoldRoom	
+		HintRoom		SpiderRoom			EmptyRoom	
+	DaggerRoom	EmptyRoom		EmptyRoom		SpiderRoom	ParasiteRoom	SlugRoom
+		GoblinRoom	GoblinRoom				EmptyRoom	
+		EmptyRoom			EmptyRoom	5GoldRoom	SpiderRoom	
+		ParasiteRoom	EmptyRoom	EmptyRoom				
+		PotionRoom		5GoldRoom				
+			ParasiteRoom	10GoldRoom	SpiderRoom			
+				EmptyRoom	EmptyRoom			
+					HintRoom			
+					PotionRoom			
+	SwordRoom	SlugRoom	OgreRoom	EmptyRoom	GoblinRoom	SpiderRoom	5GoldRoom	EmptyRoom
+				EmptyRoom			GoblinRoom	
+			PotionRoom	SpiderRoom			EmptyRoom	
+			ParasiteRoom	EmptyRoom	10GoldRoom			
+				GoblinRoom				
+				HintRoom				
+			5GoldRoom	PotionRoom	EmptyRoom	GoblinRoom		
+				EmptyRoom		OgreRoom		
+			ParasiteRoom	PotionRoom		EmptyRoom	PotionRoom	
+				OgreRoom		SwordRoom		
+						HintRoom		
+						EmptyRoom		
+					10GoldRoom	PotionRoom	EmptyRoom	
+						OgreRoom		
+						RedOgreRoom		
+
