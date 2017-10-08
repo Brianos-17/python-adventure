@@ -52,3 +52,10 @@ class Player():
     else:
       print("You have dealt {} damage. {} health is down to {}!".format(max_dmg, enemy.name, enemy.hp))
 
+#Method which allows player to execute an action
+
+  def do_action(self, action, **kwargs):
+    action_method = getattr(self, action.method.__name__)
+    if action_method:
+      action_method(**kwargs)
+

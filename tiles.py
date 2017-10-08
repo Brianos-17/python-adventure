@@ -73,6 +73,12 @@ class EnemyRoom(MapTile):
       print("{} hit you for {} damage. You have {} HP left.".format(self.enemy.name,
         self.enemy.damage, the_player.hp))
 
+  def available_actions(self):
+    if self.enemy.is_alive():
+      return actions.Attack(enemy=self.enemy)
+    else:
+      return self.adjacent_moves()
+
 #Generates enemy rooms for each type of enemy
 
 class SlugRoom(EnemyRoom):
